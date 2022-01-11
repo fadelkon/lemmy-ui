@@ -36,6 +36,7 @@ import {
   languages,
   personSelectName,
   personToChoice,
+  relTags,
   setIsoData,
   setTheme,
   setupTippy,
@@ -466,7 +467,7 @@ export class Settings extends Component<any, SettingsState> {
           </div>
           <div class="form-group row">
             <label class="col-sm-5 col-form-label" htmlFor="matrix-user-id">
-              <a href={elementUrl} rel="noopener">
+              <a href={elementUrl} rel={relTags}>
                 {i18n.t("matrix_user_id")}
               </a>
             </label>

@@ -38,6 +38,7 @@ import {
   getPageFromProps,
   getSortTypeFromProps,
   notifyPost,
+  relTags,
   restoreScrollPosition,
   saveCommentRes,
   saveScrollPosition,
@@ -371,7 +372,7 @@ export class Community extends Component<any, State> {
             this.state.sort
           )}
           title="RSS"
-          rel="noopener"
+          rel={relTags}
         >
           <Icon icon="rss" classes="text-muted small" />
         </a>

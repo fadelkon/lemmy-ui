@@ -36,6 +36,7 @@ import {
   mdToHtml,
   numToSI,
   previewLines,
+  relTags,
   setupTippy,
   showScores,
   wsClient,
@@ -225,7 +226,7 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
         <a
           class="float-right text-body d-inline-block position-relative mb-2"
           href={post.url}
-          rel="noopener"
+          rel={relTags}
           title={post.url}
         >
           {this.imgThumb(this.getImageSrc())}
@@ -253,7 +254,7 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
             className="text-body"
             href={post.url}
             title={post.url}
-            rel="noopener"
+            rel={relTags}
           >
             <div class="thumbnail rounded bg-light d-flex justify-content-center">
               <Icon icon="external-link" classes="d-flex align-items-center" />
@@ -316,7 +317,7 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
                 className="text-muted font-italic"
                 href={post_view.post.url}
                 title={post_view.post.url}
-                rel="noopener"
+                rel={relTags}
               >
                 {hostname(post_view.post.url)}
               </a>
@@ -399,7 +400,7 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
               className={!post.stickied ? "text-body" : "text-primary"}
               href={post.url}
               title={post.url}
-              rel="noopener"
+              rel={relTags}
             >
               {post.name}
             </a>

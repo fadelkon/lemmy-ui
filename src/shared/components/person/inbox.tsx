@@ -30,6 +30,7 @@ import {
   editCommentRes,
   fetchLimit,
   isBrowser,
+  relTags,
   saveCommentRes,
   setIsoData,
   setupTippy,
@@ -159,7 +160,7 @@ export class Inbox extends Component<any, InboxState> {
                   <a
                     href={`/feeds/inbox/${UserService.Instance.auth}.xml`}
                     title="RSS"
-                    rel="noopener"
+                    rel={relTags}
                   >
                     <Icon icon="rss" classes="ml-2 text-muted small" />
                   </a>

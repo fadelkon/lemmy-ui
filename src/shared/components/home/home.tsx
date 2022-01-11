@@ -43,6 +43,7 @@ import {
   mdToHtml,
   notifyPost,
   numToSI,
+  relTags,
   restoreScrollPosition,
   saveCommentRes,
   saveScrollPosition,
@@ -690,7 +691,7 @@ export class Home extends Component<any, HomeState> {
         {this.state.listingType == ListingType.All && (
           <a
             href={`/feeds/all.xml?sort=${this.state.sort}`}
-            rel="noopener"
+            rel={relTags}
             title="RSS"
           >
             <Icon icon="rss" classes="text-muted small" />
@@ -699,7 +700,7 @@ export class Home extends Component<any, HomeState> {
         {this.state.listingType == ListingType.Local && (
           <a
             href={`/feeds/local.xml?sort=${this.state.sort}`}
-            rel="noopener"
+            rel={relTags}
             title="RSS"
           >
             <Icon icon="rss" classes="text-muted small" />
@@ -710,7 +711,7 @@ export class Home extends Component<any, HomeState> {
             <a
               href={`/feeds/front/${UserService.Instance.auth}.xml?sort=${this.state.sort}`}
               title="RSS"
-              rel="noopener"
+              rel={relTags}
             >
               <Icon icon="rss" classes="text-muted small" />
             </a>
